@@ -53,9 +53,13 @@ app.controller('mainCtrl, function($scope){
 });
 ```
 A few things to notice here. We added a controller property to our app, we named it 'mainCtrl' because that was the name we chose in ng-controller in our index.html file, and the second argument is a callback function that has a $scope property built into it. Note that every time you create a new controller, you get this $scope object. Whatever we stick on $scope will be available in our view (in this case, index.html is our view). For example, in my controller if I said:
+
  $scope.name = "Tyler", 
+
  then in my HTML page I can say <p> My name is: {{name}} </p> 
+
  and that will show as My name is: Tyler. 
+ 
  Take a step back and think about the importance of this. When I first started to program a huge question I had was 'How do websites know what to display when there are so many different variations of pages. Facebook for example, everyone has their own profile. That's a lot of pages. But in reality it's just one page with facebook changing the data based on who the user is. This process is called 'templating'. Your profile page is just one template (that everyone shares), and that template is loaded with different data depending on who the user is.
 *Now, in your controller, I want you to add an array to your $scope object and I want you to fill that array with a list of your friends. I don't want to give you the code for this one but if you get stuck ask the teacher.
 *Now that we have an array full of friends as a property on $scope, we can then use ng-repeat in our view to show each one of our friends.
