@@ -48,7 +48,7 @@ var app = angular.module('friendsList');
 Again note that I didn't include the extra [] as the second argument because I don't want to create a new module, but get my original friendsList module I already created.
 * Now that we've saved our module into the 'app' variable. Let's create a new controller and stick it as a property on our friendsList app. The way you do that is below.
 ```javascript
-app.controller('mainCtrl, function($scope){
+app.controller('mainCtrl', function($scope){
 
 });
 ```
