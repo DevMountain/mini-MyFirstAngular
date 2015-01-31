@@ -48,7 +48,7 @@ var app = angular.module('friendsList');
 Again note that I didn't include the extra [] as the second argument because I don't want to create a new module, but get my original friendsList module I already created.
 * Now that we've saved our module into the 'app' variable. Let's create a new controller and stick it as a property on our friendsList app. The way you do that is below.
 ```javascript
-app.controller('mainCtrl, function($scope){
+app.controller('mainCtrl', function($scope){
 
 });
 ```
@@ -74,7 +74,7 @@ A few things to notice here. We added a controller property to our app, we named
 ```
 This syntax is a little weird at first. It should feel very similar to a for in loop in JavaScript. What we're doing is saying loop over $scope.friends (which was defined in the controller) and for every item in $scope.friends, save that item to a variable called friend, then show that friend to the view. So if you had: 
 ```javascript
-app.controller('mainCtrl, function($scope){
+app.controller('mainCtrl', function($scope){
 $scope.friends = ['Jordyn', 'Ryan', 'Chelsey'];
 ```
 then in your view you will see 
