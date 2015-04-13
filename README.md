@@ -6,8 +6,8 @@ For this mini-project you're going to create a basic angular Application from sc
 
 ###Step 1: HTML Skeleton 
 * Fork this repo, then clone your fork.
-* Create a 'index.hmtl' file, a 'styles.css' file, and a 'js' folder.
-* In your 'index.html file create a basic skelton of your applicaiton. Be sure to include the following
+* Create a 'index.html' file, a 'styles.css' file, and a 'js' folder.
+* In your 'index.html' file create a basic skeleton of your application. Be sure to include the following
     - A Doctype
     - Opening and closing <html> tags
     - Opening and closing <head> and <body> tags
