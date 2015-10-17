@@ -37,7 +37,7 @@ Now, instead of creating a friendsList module, we're just getting one that has a
 * The last step that will bite you at least a few times during DevMountain is whenever you create a JavaScript file, you always have to include that in your HTML page. Go over to index.html and include 'js/app.js' as a script right below where you included Angular. (The reason it's 'js/app.js' is because we made a folder called 'js' and app.js is inside that folder.
 
 ##Step 4: Create a Controller and $scope
-* Now that you've CREATED a module (using angular.module('moduleName', []) in the app.js file, let's go ahead a create a controller that is going to be apart of the 'friendsList' module that we made.
+* Now that you've CREATED a module (using angular.module('moduleName', []) in the app.js file, let's go ahead a create a controller that is going to be a part of the 'friendsList' module that we made.
 * Inside of the 'js' folder, create a file called 'mainCtrl.js'. Notice we're using the same as the controller we made earlier (mainCtrl). 
 * Right now is probably a good time to head over to your index.html page and include 'js/mainCtrl.js' as a script below 'app.js' so that Angular knows where to look for mainCtrl.js
 * Now that we've included the file, let's create our first controller. The syntax at first is going to look very familiar. Remember, we don't want to create an entirely new module but instead we want to get our module we made earlier (friendsList) then stick our mainCtrl as a property on that module.
