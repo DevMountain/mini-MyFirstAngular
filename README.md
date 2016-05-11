@@ -27,11 +27,11 @@ Now that we have our basic HTML/CSS set up, let's make our plain website into an
 * You can think of 'app.js' as the hub of your Angular application. This is where we're going to initialize our application and (in a few days) is where we'll have all of our apps configuration data.
 * Let's initialize (or start up, if you will) our "friendsList" application. At the top of your 'app.js' file put 
 ```javascript
-var app = angular.module('friendsList', []);
+angular.module('friendsList', []);
 ```
-* It's really important to note the syntax of what you just copied. We're telling the browser to create a new angular module called 'friendsList' and save that angular module into a variable called app. Take note on the empty array we're passing as the second parameter to angular.module, this empty array tells Angular to create a new module rather than just getting an old module that has already been created. It's crucial to understand that in our 'app.js' file we're creating a new module (passing in the empty []) because our 'app.js' file is our hub as we mentioned earlier. In other files instead of passing in both the name of the module (friendsList) and an empty array, we'll just pass in the name of the module like so, 
+* It's really important to note the syntax of what you just copied. We're telling the browser to create a new angular module called 'friendsList'. Take note on the empty array we're passing as the second parameter to angular.module, this empty array tells Angular to create a new module rather than just getting an old module that has already been created. It's crucial to understand that in our 'app.js' file we're creating a new module (passing in the empty []) because our 'app.js' file is our hub as we mentioned earlier. In other files instead of passing in both the name of the module (friendsList) and an empty array, we'll just pass in the name of the module like so, 
 ```javascript
-var app = angular.module('friendsList');
+angular.module('friendsList');
 ```
 Now, instead of creating a friendsList module, we're just getting one that has already been created. You'll see this in action in the next step.
 * The last step that will bite you at least a few times during DevMountain is whenever you create a JavaScript file, you always have to include that in your HTML page. Go over to index.html and include 'js/app.js' as a script right below where you included Angular. (The reason it's 'js/app.js' is because we made a folder called 'js' and app.js is inside that folder.
@@ -41,14 +41,14 @@ Now, instead of creating a friendsList module, we're just getting one that has a
 * Inside of the 'js' folder, create a file called 'mainCtrl.js'. Notice we're using the same as the controller we made earlier (mainCtrl). 
 * Right now is probably a good time to head over to your index.html page and include 'js/mainCtrl.js' as a script below 'app.js' so that Angular knows where to look for mainCtrl.js
 * Now that we've included the file, let's create our first controller. The syntax at first is going to look very familiar. Remember, we don't want to create an entirely new module but instead we want to get our module we made earlier (friendsList) then stick our mainCtrl as a property on that module.
-* At the top of the mainCtrl.js file go ahead and get your friendsList module and save it to a variable called 'app'.
+* At the top of the mainCtrl.js file go ahead and get your friendsList module.
 ```javascript
-var app = angular.module('friendsList');
+angular.module('friendsList')
 ```
 Again note that I didn't include the extra [] as the second argument because I don't want to create a new module, but get my original friendsList module I already created.
-* Now that we've saved our module into the 'app' variable. Let's create a new controller and stick it as a property on our friendsList app. The way you do that is below.
+* Let's create a new controller and stick it as a property on the end of our friendsList app. The way you do that is below.
 ```javascript
-app.controller('mainCtrl', function($scope){
+angular.module('friendsList').controller('mainCtrl', function($scope){
 
 });
 ```
