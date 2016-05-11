@@ -74,7 +74,7 @@ A few things to notice here. We added a controller property to our app, we named
 ```
 This syntax is a little weird at first. It should feel very similar to a for in loop in JavaScript. What we're doing is saying loop over $scope.friends (which was defined in the controller) and for every item in $scope.friends, save that item to a variable called friend, then show that friend to the view. So if you had: 
 ```javascript
-angular.controller('mainCtrl', function($scope){
+angular.module('friendsList').controller('mainCtrl', function($scope){
 $scope.friends = ['Jordyn', 'Ryan', 'Chelsey'];
 ```
 then in your view you will see 
