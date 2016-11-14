@@ -1,4 +1,4 @@
-Babies First Angular
+My First Angular
 ==============
 
 ##Objectives
